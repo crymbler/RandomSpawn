@@ -392,8 +392,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _pointContainer: {fileID: 1357159191}
-  _template: {fileID: 8596539404981380727, guid: 9d35e855763152149aadea48ed162712, type: 3}
-  _spawnDelay: 3
+  _enemyPrefab: {fileID: 6943695779377629795, guid: 9d35e855763152149aadea48ed162712, type: 3}
+  _spawnDelay: 2
+  _timeToDestoy: 2.5
 --- !u!4 &892675114
 Transform:
   m_ObjectHideFlags: 0

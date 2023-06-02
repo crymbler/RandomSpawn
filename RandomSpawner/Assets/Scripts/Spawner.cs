@@ -5,8 +5,10 @@ using UnityEngine;
 public class Spawner : MonoBehaviour
 {
     [SerializeField] private Transform _pointContainer;
-    [SerializeField] private GameObject _template;
+    [SerializeField] private Enemy _enemyPrefab;
     [SerializeField] private float _spawnDelay;
+    [SerializeField] private float _timeToDestoy;
+
 
     private Transform[] _VectorSpawnpoints;
     private float _nextSpawnDelay;
@@ -36,8 +38,8 @@ public class Spawner : MonoBehaviour
         int randomNumber = Random.Range(0, _VectorSpawnpoints.Length);
 
         Vector3 objectPosition = _VectorSpawnpoints[randomNumber].position;
-        GameObject gameObject = Instantiate(_template, objectPosition, Quaternion.identity);
+        Enemy enemy = Instantiate(_enemyPrefab, objectPosition, Quaternion.identity);
 
-        Destroy(gameObject, 1.5f);
+        Destroy(enemy.gameObject, _timeToDestoy);
     }
 }
