@@ -13,7 +13,7 @@ public class Spawner : MonoBehaviour
     private Transform[] _VectorSpawnpoints;
     private float _nextSpawnDelay;
 
-    void Start()
+    private void Start()
     {
         _VectorSpawnpoints = new Transform[_pointContainer.childCount];
 
